@@ -11,3 +11,18 @@ def countDigits(n:int) -> int:
         n = int(n / 10) #n//=10
     return count
 print(countDigits(336))
+
+def reverseNum(n:int) -> int:
+    """
+    You are given a number ’n’.
+    Reverse digits of ‘n’.
+    """
+    reversed = int()
+    while n > 0:
+        last_digit = n % 10
+        reversed = reversed * 10 + last_digit
+        n //= 10
+    return reversed
+print(reverseNum(1234))
+
+
