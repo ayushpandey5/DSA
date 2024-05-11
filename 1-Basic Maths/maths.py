@@ -11,6 +11,8 @@ def countDigits(n:int) -> int:
         n = int(n / 10) #n//=10
     return count
 print(countDigits(336))
+import math
+print(int(math.log10(123)+1))
 
 def reverseNum(n:int) -> int:
     """
@@ -97,4 +99,8 @@ def sqrt_printDivisors(num:int) -> list:
     divisors.sort()
     return divisors
 print(sqrt_printDivisors(36))
+
+#def isPrime(num:int) -> bool:
+
+
 
