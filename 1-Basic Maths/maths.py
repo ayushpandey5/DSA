@@ -90,9 +90,12 @@ print(printDivisors(36))
 
 def sqrt_printDivisors(num:int) -> list:
     divisors = []
+    # divisors = set()
     sqrt = int((num ** 0.5))
     for i in range(1,sqrt+1):
         if num % i == 0:
+            # divisors.add(i)
+            # diisors.add(num//i)
             divisors.append(i)
             if num//i != i:
                 divisors.append(num//i)
@@ -100,7 +103,10 @@ def sqrt_printDivisors(num:int) -> list:
     return divisors
 print(sqrt_printDivisors(36))
 
-#def isPrime(num:int) -> bool:
+def isPrime(num:int) -> bool:
+    count = 0
+    for i in range(1,int(num ** 0.5 + 1)):
+
 
 
 
