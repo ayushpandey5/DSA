@@ -37,5 +37,28 @@ def checkPalindrome(n:int) -> bool:
     # return n == str()
 print(checkPalindrome(121))
 
+# Better Brute force
+def gcd(num1:int,num2:int) -> int:
+    min_num = min(num1,num2)
+    for i in range(min_num,1,-1): #
+        if num1 % i == 0 and num2 % i == 0:
+            return i
+    return 1
+print(gcd(20,15))
 
+def euclideanGCD(num1:int,num2:int) -> int:
+    if num1 == 0:
+        return num2
+    if num2 == 0:
+        return num1
+    if num1 > num2:
+        return euclideanGCD(num1-num2,num2)
+    else:
+        return euclideanGCD(num1,num2-num1)
+print(euclideanGCD(9,12))
 
+# Optimal Euclidean
+def gcd_euclidean(num1:int,num2:int) -> int:
+    if num2 == 0:
+        return num1
+    return gcd_euclidean(num2, num1%num2)
