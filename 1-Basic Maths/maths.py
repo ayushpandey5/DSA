@@ -25,4 +25,17 @@ def reverseNum(n:int) -> int:
     return reversed
 print(reverseNum(1234))
 
+def checkPalindrome(n:int) -> bool:
+    i,j = 0,len(str(n)) - 1
+    str_n = str(n)
+    while i < j:
+        if str_n[i] != str_n[j]:
+            return False
+        i += 1
+        j -= 1
+    return True
+    # return n == str()
+print(checkPalindrome(121))
+
+
 
