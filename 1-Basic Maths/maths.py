@@ -62,3 +62,19 @@ def gcd_euclidean(num1:int,num2:int) -> int:
     if num2 == 0:
         return num1
     return gcd_euclidean(num2, num1%num2)
+
+
+def armstrong(num:int) -> bool:
+    sum=0
+    length=len(str(num))
+    original_num = num
+    while num > 0:
+        last_digit = num % 10
+        sum = sum + last_digit ** length
+        num //= 10
+    if original_num == sum:
+        return True
+    return False
+print(armstrong(153))
+print(armstrong(35))
+
