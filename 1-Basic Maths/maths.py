@@ -78,3 +78,23 @@ def armstrong(num:int) -> bool:
 print(armstrong(153))
 print(armstrong(35))
 
+def printDivisors(num:int) -> list:
+    divisors=[]
+    for i in range(1,num+1):
+        if num % i == 0:
+            divisors.append(i)
+    return divisors
+print(printDivisors(36))
+
+def sqrt_printDivisors(num:int) -> list:
+    divisors = []
+    sqrt = int((num ** 0.5))
+    for i in range(1,sqrt+1):
+        if num % i == 0:
+            divisors.append(i)
+            if num//i != i:
+                divisors.append(num//i)
+    divisors.sort()
+    return divisors
+print(sqrt_printDivisors(36))
+
