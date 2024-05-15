@@ -105,8 +105,12 @@ print(sqrt_printDivisors(36))
 
 def isPrime(num:int) -> bool:
     count = 0
-    for i in range(1,int(num ** 0.5 + 1)):
-
+    for i in range(2,int(num ** 0.5 + 1)):
+        if num % i == 0:
+            count += 1
+        if count > 2:
+            break
+    return count == 2
 
 
 
