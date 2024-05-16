@@ -18,3 +18,10 @@ def printNTo1(i,num):
     print(i)
     printNTo1(i-1,num)
 #printNTo1(10,10)
+
+def sumOfSeries(i,n,total=0):
+    if i > n:
+        print(total)
+        return
+    sumOfSeries(i+1,n,total+i)
+#sumOfSeries(1,3)
