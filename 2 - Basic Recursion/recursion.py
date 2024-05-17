@@ -47,6 +47,16 @@ def swap(i,n):
     n[i],n[len(n)-i-1] = n[len(n)-i-1],n[i]
     swap(i+1,n)
     return n
-    
-print(swap(0,[1,2,3,4,5,6,7]))
+#print(swap(0,[1,2,3,4,5,6,7]))
+
+# Two pointer recursive swap.
+def swapArray(l,r,n):
+    while l >= r:
+        return
+    n[l],n[r] = n[r],n[l]
+    swapArray(l+1,r-1,n)
+    return n
+#print(swapArray(0,len([1,2,3,4,5])-1, [1,2,3,4,5]))
+
+
 
