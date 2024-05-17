@@ -38,5 +38,15 @@ def factorial(n):
     if n == 1:
         return 1
     return n * factorial(n-1)
-print(factorial(5))
+#print(factorial(5))
     
+#Extra parameter for position from which swap should occur, ideally 0th position
+def swap(i,n):
+    if i >= len(n)//2:
+        return
+    n[i],n[len(n)-i-1] = n[len(n)-i-1],n[i]
+    swap(i+1,n)
+    return n
+    
+print(swap(0,[1,2,3,4,5,6,7]))
+
