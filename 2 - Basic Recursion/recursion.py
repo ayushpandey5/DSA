@@ -28,9 +28,15 @@ def sumOfSeries(i,n,total=0):
 #sumOfSeries(1,3)
 
 # Function-based
-def sumOfSeries1(n,):
+def sumOfSeries1(n):
     if n == 0:
         return 0
     return n + sumOfSeries1(n-1)
+#print(sumOfSeries1(3))
 
-print(sumOfSeries1(3))
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+print(factorial(5))
+    
