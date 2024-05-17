@@ -64,6 +64,7 @@ def palindrome(i,s):
     if s[i] != s[len(s)-i-1]:
         return False
     return palindrome(i+1,s)
+    # return s == s[::-1]
 print(palindrome(0,"abba"))
 
 
