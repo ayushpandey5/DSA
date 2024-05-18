@@ -65,6 +65,13 @@ def palindrome(i,s):
         return False
     return palindrome(i+1,s)
     # return s == s[::-1]
-print(palindrome(0,"abba"))
+#print(palindrome(0,"abba"))
 
+def fibanacci(n):
+    if n <= 1:
+        return n
+    last = fibanacci(n-1)
+    second_last = fibanacci(n-2)
+    return last + second_last
+print(fibanacci(6))
 
