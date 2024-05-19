@@ -13,5 +13,12 @@ def hashArray(arr):
     for i in range(len(arr)):
         hash_array[arr[i]] += 1 
     return hash_array,hash_array[1]
+#print(hashArray([1,2,3,4,5,10,12,1]))
 
-print(hashArray([1,2,3,4,5,10,12,1]))
+
+def stringHash(s):
+    string_hash = [0] * 26
+    for i in range(len(s)):
+        string_hash[ord(s[i]) - ord('a')] += 1
+    return string_hash,string_hash[ord('l') - ord('a')]
+print(stringHash("hello"))
