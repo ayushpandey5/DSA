@@ -39,13 +39,13 @@ def highest_lowest(arr):
         else:
             freq[arr[i]] = 1
     min_freq = list(freq.values())[0]
-    max_freq = 0
+    max_freq = list(freq.values())[0]
     for val in freq.values():
         if min_freq > val:
             min_freq = val
         if max_freq < val:
             max_freq = val
-    print(min_freq,max_freq)
+    return min_freq,max_freq
     # min_element =[]
     # max_element = []
     # for key,val in freq.items():
