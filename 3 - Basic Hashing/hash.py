@@ -74,3 +74,4 @@ def highest_lowest(arr):
     #         max_element.append(key)
     # return min_freq,min_element, max_freq, max_element
 #print(highest_lowest([10,10,20,20,30,30,40,40,50,50,10,100]))
+
