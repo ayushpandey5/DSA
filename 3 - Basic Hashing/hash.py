@@ -26,8 +26,27 @@ def stringHash(s):
         print(f"{chr((i+ord('a')))} -> {string_hash[i]}")
 #print(stringHash("hello"))
 
-#def highest_lowest_brute(arr):
+def highest_lowest_brute(arr):
+    unique_num = []
+    frequency=[]
+    for i in range(len(arr)):
+        if arr[i] in unique_num:
+            idx = unique_num.index(arr[i])
+            frequency[idx] += 1
+        else:
+            unique_num.append(arr[i])
+            frequency.append(1)
+    minFreq,maxFreq = frequency[0],frequency[0]
+    for freq in frequency:
+        if minFreq > freq:
+            minFreq = freq
+        if maxFreq < freq:
+            maxFreq = freq
+    
+    minElem,maxElem = unique_num[frequency.index(minFreq)],unique_num[frequency.index(maxFreq)]
+    return (minFreq,minElem),(maxFreq,maxElem)
 
+print(highest_lowest_brute([10,10,20,20,30,30,40,40,50,50,10,100,100]))
 
 
 # Optimal way to find highest and lowest freq items using hashmap/dictionary
@@ -54,4 +73,4 @@ def highest_lowest(arr):
     #     if val == max_freq:
     #         max_element.append(key)
     # return min_freq,min_element, max_freq, max_element
-print(highest_lowest([10,10,20,20,30,30,40,40,50,50,10,100]))
+#print(highest_lowest([10,10,20,20,30,30,40,40,50,50,10,100]))
