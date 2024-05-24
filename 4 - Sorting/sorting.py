@@ -33,6 +33,15 @@ def bubble_sort(arr):
                 flag += 1
         if flag == 0:
             break
+    return arr   
+#print(bubble_sort([4,1,2,3,5,10,6,7]))
+
+def insertion_sort(arr):
+    for i in range(len(arr)):
+        j = i
+        while j>0 and arr[j-1]>arr[j]:
+            arr[j-1],arr[j] = arr[j],arr[j-1]
+            j -= 1
     return arr
-    
-print(bubble_sort([4,1,2,3,5,10,6,7]))
+
+print(insertion_sort([4,1,2,3,5,10,6,7]))
