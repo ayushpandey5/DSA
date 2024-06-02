@@ -43,5 +43,4 @@ def insertion_sort(arr):
             arr[j-1],arr[j] = arr[j],arr[j-1]
             j -= 1
     return arr
-
 print(insertion_sort([4,1,2,3,5,10,6,7]))
