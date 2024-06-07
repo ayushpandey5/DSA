@@ -27,6 +27,18 @@ def merge(left_side,right_side):
     return temp
 
 arr = [38, 27, 43, 3, 9, 82, 10]
-arr = merge_sort(arr)
-print(arr)
+# arr = merge_sort(arr)
+# print(arr)
 
+
+def recursive_bubble(arr,length):
+    if length <= 1:
+        return
+    for i in range(length-1):
+        if arr[i] > arr[i+1]:
+            arr[i],arr[i+1] = arr[i+1],arr[i]
+    
+    return recursive_bubble(arr,length - 1)
+
+recursive_bubble(arr,len(arr))
+print(arr)
